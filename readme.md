@@ -1,6 +1,6 @@
 # Lavash market - Online Store
 
-My second web project. Simple website for lavash orders.
+THIS IS A COPY OF MY SECOND PROJECT, which took A different path.. Simple website for lavash orders.
 
 ## Status
 - HTML/CSS done
