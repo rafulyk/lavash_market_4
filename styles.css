@@ -143,13 +143,12 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 .product-quantity-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
     text-align: center;
     background-color: var(--Almond-Slik);
     border-radius: 0 2rem 1rem 2rem;
     margin-top: -5px;
-    padding-top: 1rem;
     border: solid 3px var(--Plum);
     box-shadow: 2px 2px 7px var(--Coffee);
 }
@@ -180,13 +179,14 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0.3rem 0;
 }
 .product-img { width: 45%; }
 .decrement-btns, .increment-btns {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 22%;
+    width: 23%;
 }
 .decrement-btns { align-items: flex-start; }
 .increment-btns { align-items: flex-end; }
@@ -196,7 +196,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 .q-btn img { width: 100%; }
 .display-box {
     width: 90%;
-    margin: 1rem 0;
+    margin: 0 0.4rem 0.4rem 0;
 }
 .quantity {
     display: flex;
