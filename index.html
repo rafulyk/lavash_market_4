@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Лаваш market">
+    <meta name="theme-color" content="#FFD6AF">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="styles.css">
+    <title>Лаваш market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div id="top-header">
+        <img id="logo" src="logos/Lmarket4.png" alt="Логотип компании">
+        <div id="contacts-window">
+            <div id="contacts">
+                <div class="icon-space"></div>
+                <a href="https://wa.me/79174526677" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/whatsapp.png" alt="Иконка whatsapp"></a>
+                <a href="https://t.me/lavashufa" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/telegram.png" alt="Иконка telegram"></a>
+                <a href="https://max.ru/u/f9LHodD0cOIWfjZ_yr5Y0I-tprCtTucdRrg2XVYG-CJVSXYg0LpNhqk2q80" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/max.png" alt="Иконка max"></a>
+                <div class="icon-space"></div>
+            </div>
+        </div>
+    </div>
+    <div id="nav-bar" role="tablist" aria-label="Навигация по страницам">
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="info-page"><img class="nav-icon" src="logos/info.png" alt="Логотип информации">Инфо</button>
+        <button class="nav-btn" role="tab" aria-selected="true" aria-controls="order-page"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа">Заказать</button>
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="account-page"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета">Кабинет</button>
+        <div id="nav-select"></div>
+    </div>
+</header>
+<main>
+    <section class="page" id="info-page" role="tabpanel" hidden>
+        <h2>Напишите нам!</h2>
+        <div id="contacts-cntnr">
+            <a href="https://wa.me/79174526677" target="_blank" rel="noopener noreferrer"><img src="logos/whatsapp.png" alt="Иконка whatsapp"></a>
+            <a href="https://t.me/lavashufa" target="_blank" rel="noopener noreferrer"><img src="logos/telegram.png" alt="Иконка telegram"></a>
+            <a href="https://max.ru/u/f9LHodD0cOIWfjZ_yr5Y0I-tprCtTucdRrg2XVYG-CJVSXYg0LpNhqk2q80" target="_blank" rel="noopener noreferrer"><img src="logos/max.png" alt="Иконка max"></a>
+        </div>
+        <section>
+            <h2>О нас</h2>
+            <p>С 2012 года создаем идеальный лаваш для шаурмы. 
+            Работаем в Уфе и Москве, поддерживая высочайшее качество в каждом городе.</p>
+            <h2>🏭 Автоматизированная линия</h2>
+            <p>Современное оборудование гарантирует идеальную толщину и равномерную прожарку каждого листа.</p>
+            <h2>👐 Ручная работа</h2>
+            <p>Особые рецепты, которые сохраняют душу традиционной выпечки. Только натуральные ингредиенты.</p>
+            <p>Наш лаваш — не просто хлеб, это основа для вашего любимого блюда.</p>
+        </section>
+    </section>
+    <section class="page" id="order-page" role="tabpanel">
+
+
+        <!--ПЕРВЫЙ БЛОК ЗАКАЗА-------------------------------------------------------------->
+        <div class="product-box">
+            <h2>Лаваш для шаурмы <sub>45см</sub></h2>
+            <div class="product-type-selector" role="tablist">
+                <button class="selector-btn active-selector" role="tab" aria-selected="true">
+                    <img src="logos/shawarma.png" alt="Шаурма обычная">
+                </button>
+                <button class="selector-btn" role="tab" aria-selected="false">
+                    <img src="logos/shawcheese.png" alt="Шаурма сырная">
+                </button>
+            </div>    
+            <div class="product-quantity-box">
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством обычного лаваша 45см">
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="shawarma-total" >
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="shawarma-total" >
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="shawarma-total" >
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/shawarma.png" alt="Шаурма обычная">                  <!--1111 ЛАВАШ ОБЫЧНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawarma-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawarma-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawarma-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством сырного лаваша" hidden>
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="shawcheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="shawcheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="shawcheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/shawcheese.png" alt="Шаурма сырная">                  <!--2222 ЛАВАШ СЫРНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества ">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawcheese-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawcheese-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawcheese-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="display-box">
+                    <span id="shawarma-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш ОБЫЧНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                    <span id="shawcheese-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш СЫРНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--ВТОРОЙ БЛОК ЗАКАЗА-->
+        <div class="product-box">
+            <h2>Лаваш с добавками <sub>45см</sub></h2>
+            <div class="product-type-selector" role="tablist">
+                <button class="selector-btn active-selector" role="tab" aria-selected="true">
+                    <img src="logos/shawred.png" alt="Шаурма красная">
+                </button>
+                <button class="selector-btn" role="tab" aria-selected="false">
+                    <img src="logos/shawgreen.png" alt="Шаурма зеленая">
+                </button>
+                <button class="selector-btn" role="tab" aria-selected="false">
+                    <img src="logos/shawblack.png" alt="Шаурма черная">
+                </button>
+            </div>    
+            <div class="product-quantity-box">
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством томатного лаваша">
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="shawred-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="shawred-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="shawred-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/shawred.png" alt="Шаурма красная">                  <!--3333 ЛАВАШ ТОМАТНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawred-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawred-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawred-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством лаваша с зеленью" hidden>
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="shawgreen-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="shawgreen-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="shawgreen-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/shawgreen.png" alt="Шаурма зеленая">                  <!--4444 ЛАВАШ С ЗЕЛЕНЬЮ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawgreen-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawgreen-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawgreen-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством черного лаваша" hidden>
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="shawblack-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="shawblack-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="shawblack-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/shawblack.png" alt="Шаурма черная">                  <!--5555 ЛАВАШ ЧЕРНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawblack-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawblack-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawblack-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="display-box">
+                    <span id="shawred-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш ТОМАТНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                    <span id="shawgreen-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш с ЗЕЛЕНЬЮ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                    <span id="shawblack-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш ЧЕРНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--ТРЕТИЙ БЛОК ЗАКАЗА-------------------------------------------------------------->
+        <div class="product-box">
+            <h2>Лаваш мини <sub>30см</sub></h2>
+            <div class="product-type-selector" role="tablist">
+                <button class="selector-btn active-selector" role="tab" aria-selected="true">
+                    <img src="logos/shawarma.png" alt="Шаурма обычная">
+                </button>
+                <button class="selector-btn" role="tab" aria-selected="false">
+                    <img src="logos/shawcheese.png" alt="Шаурма сырная">
+                </button>
+            </div>    
+            <div class="product-quantity-box">
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством обычного лаваша МИНИ">
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="minishaw-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="minishaw-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="minishaw-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/minishaw.png" alt="Шаурма обычная мини">                  <!--6666 ЛАВАШ МИНИ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="minishaw-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="minishaw-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="minishaw-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством сырного лаваша МИНИ" hidden>
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="minicheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="minicheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="minicheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/minicheese.png" alt="Шаурма сырная мини">                  <!--7777 ЛАВАШ МИНИ СЫРНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="minicheese-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="minicheese-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="minicheese-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="display-box">
+                    <span id="minishaw-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш обычный МИНИ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                    <span id="minicheese-total" class="quantity" aria-live="polite">
+                        <span class="product-name">лаваш сырный МИНИ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--ЧЕТВЕРТЫЙ БЛОК ЗАКАЗА----------------------------------------------------------->
+        <div class="product-box">
+            <h2>Лепешка для гироса</h2>
+            <div class="product-type-selector" role="tablist">
+                <button class="selector-btn active-selector" role="tab" aria-selected="true">
+                    <img src="logos/giros.png" alt="Гирос обычный">
+                </button>
+                <button class="selector-btn" role="tab" aria-selected="false">
+                    <img src="logos/giroscheese.png" alt="Гирос сырный">
+                </button>
+            </div>    
+            <div class="product-quantity-box">
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством обычных лепешек для гироса">
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="giros-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="giros-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="giros-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/giros.png" alt="Гирос обычный">                  <!--8888 ГИРОС ОБЫЧНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="giros-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="giros-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="giros-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством сырных лепешек для гироса" hidden>
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="giroscheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="giroscheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="giroscheese-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/giroscheese.png" alt="Гирос сырный">                  <!--9999 ГИРОС СЫРНЫЙ-->
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="giroscheese-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="giroscheese-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="giroscheese-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="display-box">
+                    <span id="giros-total" class="quantity" aria-live="polite">
+                        <span class="product-name">гирос ОБЫЧНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                    <span id="giroscheese-total" class="quantity" aria-live="polite">
+                        <span class="product-name">гирос СЫРНЫЙ</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--ПЯТЫЙ БЛОК ЗАКАЗА--------------------------------------------------------------->
+        <div class="product-box">
+            <h2>Булочка для хот-дога</h2>
+            <div class="product-quantity-box">
+
+                <div class="q-btns-box" role="tabpanel" aria-label="Управление количеством булочек для хот-дога">
+                    <div class="decrement-btns" aria-label="Уменьшение количества">
+                        <button class="q-btn" data-quantity="-300" aria-label="Уменьшить на 300шт" aria-controls="hotdog-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn3.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-100" aria-label="Уменьшить на 100шт" aria-controls="hotdog-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn2.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="-25" aria-label="Уменьшить на 25шт" aria-controls="hotdog-total" hidden>
+                            <img class="q-btn-img" src="logos/q-btn1.png" alt="">
+                        </button>
+                    </div>
+                    <img class="product-img" src="logos/hotdog.png" alt="Хот-дог">
+                    <div class="increment-btns" aria-label="Увеличение количества">
+                        <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="hotdog-total">
+                            <img class="q-btn-img" src="logos/q-btn4.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="hotdog-total">
+                            <img class="q-btn-img" src="logos/q-btn5.png" alt="">
+                        </button>
+                        <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="hotdog-total">
+                            <img class="q-btn-img" src="logos/q-btn6.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="display-box">
+                    <span id="hotdog-total" class="quantity" aria-live="polite">
+                        <span class="product-name">булочка для ХОТ-ДОГА</span>
+                        <span class="total-quantity">
+                            <span class="quantity-value">0</span>штук</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page" id="account-page" role="tabpanel" hidden>
+        <h1>Account</h1>
+        <p>***Пробный подсчёт***</p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

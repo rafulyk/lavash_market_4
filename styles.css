@@ -1,0 +1,229 @@
+                /* Глобальные настройки */
+html {
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+:root {
+    --Apricot: #FFD6AF;
+    --Slik: #E7CDBD;
+    --Almond-Slik: #E1BFB1;
+    --Coffee: #2A1300;
+    --Plum: #823174;
+    --Apricot-Glass: #FFD6AFCC;
+    --Plum-Glass: #8231744D;
+    --Blush-Glass: #D7AA9E65;
+}
+*, *::before, *::after {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+[hidden] { display: none !important; }
+body, button {
+    color: var(--Coffee);
+    font-family: "Days One", sans-serif;
+}
+body {
+    height: 100%;
+    background-color: var(--Slik);
+}
+button {
+    background: transparent;
+    border: none;
+    -webkit-touch-callout: none;
+    padding: 0 0;
+}
+a, img { display: block; }
+a:active, button:active { transform: scale(0.9) rotate(-4deg);}
+sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem; }
+
+
+
+                /* Фиксировання шапка с логотипом и меняющимися иконками мессенджеров */
+#top-header {
+    height: 50px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Apricot);
+    border-bottom: 2px solid var(--Plum-Glass);
+    box-shadow: 0 0 10px var(--Coffee);
+    z-index: 1000;
+}
+#logo { width: 160px; height: 48px; }
+#contacts-window {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 50px;
+    overflow-y: hidden;
+}
+#contacts {
+    width: 36px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.7;
+    animation: contacts-change 8s linear infinite;
+}
+.contact-icon { width: 36px; height: 36px; margin: 7px 0; display: block; }
+.icon-space { width: 36px; height: 25px;}
+@keyframes contacts-change {
+        0% { transform: translateY(0); }
+        2.5% { transform: translateY(-25px); }
+        32.5% { transform: translateY(-25px); }
+        35% { transform: translateY(-75px); }
+        65% { transform: translateY(-75px); }
+        67.5% { transform: translateY(-125px); }
+        97.5% { transform: translateY(-125px); }
+        100% { transform: translateY(-175px); }
+    }
+
+
+
+
+                /* Нижняя фиксировання панель навигации с тремя кнопками */
+#nav-bar, #nav-select {
+    box-shadow: 0 0 10px var(--Coffee);
+    border-radius: 2rem;
+    border: solid 2px var(--Plum-Glass);
+    z-index: 1000;
+}
+#nav-bar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 20rem;
+    height: 4rem;
+    background-color: var(--Apricot-Glass);
+    backdrop-filter: blur(2px);
+}
+.nav-btn, #nav-select { height: 100%; }
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.nav-icon { width: 2.5rem; }
+#nav-select {
+    position: absolute;
+    top: -2px;
+    width: 36%;
+    background-color: var(--Plum-Glass);
+    transition: 0.3s;
+    left: 32%;
+}
+
+
+
+
+
+                /* Три основных контейнера, в которых будет весь контент */
+.page {
+    height: 100%;
+    padding: 5rem 1rem 7rem;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+
+
+
+                /* Контейнер для заказа лаваша */
+.product-box { margin: 2rem 0}
+.product-quantity-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: var(--Almond-Slik);
+    border-radius: 0 2rem 1rem 2rem;
+    margin-top: -5px;
+    padding-top: 1rem;
+    border: solid 3px var(--Plum);
+    box-shadow: 2px 2px 7px var(--Coffee);
+}
+.product-type-selector {
+    display: inline-flex;
+    position: relative;
+    background-color: var(--Plum);
+    border-radius: 1rem 1rem 0 0;
+}
+.selector-btn {
+    width: 5rem;
+    height: 2.5rem;
+}
+.selector-btn img {
+    position: relative;
+    height: 100%;
+    transform: rotate(45deg) scale(1.2);
+    margin: auto;
+    opacity: 0.8;
+    z-index: 1;
+}
+.active-selector {
+    background-color: var(--Almond-Slik);
+    border-radius: 1rem 1rem 0 0;
+    transform: translate(3px, 3px);
+}
+.q-btns-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.product-img { width: 45%; }
+.decrement-btns, .increment-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 22%;
+}
+.decrement-btns { align-items: flex-start; }
+.increment-btns { align-items: flex-end; }
+.increment-btns .q-btn:first-child, .decrement-btns .q-btn:last-child { width: 70%; }
+.q-btn:nth-child(2) { width: 85%; }
+.increment-btns .q-btn:last-child, .decrement-btns .q-btn:first-child { width: 100%; }
+.q-btn img { width: 100%; }
+.display-box {
+    width: 90%;
+    margin: 1rem 0;
+}
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Plum-Glass);
+    font-size: 0.8rem;
+    margin: 2px;
+    padding: 0 5px;
+}
+.product-name { font-size: 1rem; }
+.quantity-value { font-size: 1.5rem; }
+
+
+
+
+
+                /* Первый контейнер с информацией о компании */
+#contacts-cntnr {
+    display: flex;
+    justify-content: space-evenly;
+}
+#about-us p {
+    background-color: var(--Blush-Glass);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 0 5px var(--Apricot);
+}
+#info-page h2 {
+    margin-top: 20px;
+}
