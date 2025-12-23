@@ -39,6 +39,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 
 
 
+
                 /* Фиксировання шапка с логотипом и меняющимися иконками мессенджеров */
 #top-header {
     height: 50px; 
@@ -80,8 +81,6 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
         97.5% { transform: translateY(-125px); }
         100% { transform: translateY(-175px); }
     }
-
-
 
 
                 /* Нижняя фиксировання панель навигации с тремя кнопками */
@@ -126,32 +125,33 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 
 
 
-
                 /* Три основных контейнера, в которых будет весь контент */
 .page {
     height: 100%;
-    padding: 5rem 1rem 7rem;
+    padding: 5rem 0.5rem 15rem;
     max-width: 30rem;
     margin: 0 auto;
 }
 
 
-
-
-                /* Контейнер для заказа лаваша */
-.product-box { margin: 2rem 0}
+                /* Контейнер для заказа продукта */
+.product-box, .lonely-product-box { margin: 2rem 0}
 .product-quantity-box {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 100%;
+    width: calc(100% - 0.5rem);
     text-align: center;
     background-color: var(--Almond-Slik);
     border-radius: 0 2rem 1rem 2rem;
     margin-top: -5px;
+    margin-right: 0.5rem;
     border: solid 3px var(--Plum);
     box-shadow: 2px 2px 7px var(--Coffee);
 }
+
+
+                /* Селектор типа продукта */
 .product-type-selector {
     display: inline-flex;
     position: relative;
@@ -165,7 +165,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 .selector-btn img {
     position: relative;
     height: 100%;
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.1);
     margin: auto;
     opacity: 0.8;
     z-index: 1;
@@ -175,42 +175,64 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     border-radius: 1rem 1rem 0 0;
     transform: translate(3px, 3px);
 }
-.q-btns-box {
+
+
+                /* Бокс для изменения количества */
+.btns-img-box {
     display: flex;
-    justify-content: center;
     width: 100%;
-    margin: 0.3rem 0;
+    margin-top: 0.5rem;
 }
-.product-img { width: 45%; }
-.decrement-btns, .increment-btns {
+.delete-box {
+    width: 18%;
+    margin-right: auto;
+}
+.delete-img { width: 36%; margin: 0 auto;}
+.product-img { width: 54%; }
+.increment-btns {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 23%;
+    align-items: flex-end;
+    width: 28%;
 }
-.decrement-btns { align-items: flex-start; }
-.increment-btns { align-items: flex-end; }
-.increment-btns .q-btn:first-child, .decrement-btns .q-btn:last-child { width: 70%; }
+.q-btn:first-child { width: 70%; }
 .q-btn:nth-child(2) { width: 85%; }
-.increment-btns .q-btn:last-child, .decrement-btns .q-btn:first-child { width: 100%; }
-.q-btn img { width: 100%; }
+.q-btn:last-child { width: 100%; }
+.q-btn-img { width: 65%; margin-right: auto;}
+
+
+                /* Дисплей с результатами */
 .display-box {
     width: 90%;
-    margin: 0 0.4rem 0.4rem 0;
+    margin: 0.3rem;
 }
 .quantity {
     display: flex;
     justify-content: space-between;
     background-color: var(--Plum-Glass);
     font-size: 0.8rem;
-    margin: 2px;
+    margin: 3px;
     padding: 0 5px;
 }
 .product-name { font-size: 1rem; }
 .quantity-value { font-size: 1.5rem; }
-
-
-
+.hide {
+    opacity: 0.5;
+    transform: scale(0.97)
+}
+#order-complete {
+    width: 100%;
+}
+#order-complete img {
+    width: 40%;
+    margin: 0 auto;
+}
+#orders-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 
                 /* Первый контейнер с информацией о компании */
