@@ -125,7 +125,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     justify-content: space-around;
     align-items: center;
 }
-#close-order-btn img { width: 1rem; }
+#order-btn-hide img { width: 1rem; }
 #order-btn { font-size: 1.6rem; }
 #order-btn span { font-size: 1.2rem; }
 .nav-btn:nth-child(2), #order-btn { animation: for-order-btn 1.5s infinite}

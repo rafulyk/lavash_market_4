@@ -34,7 +34,7 @@
         <div class="nav-marker"></div>
     </div>
     <div id="order-btn-box" hidden>
-        <button id="close-order-btn" aria-label="Закрыть кнопку заказа"><img id="close-icon" src=logos/delete.png alt=""></button>
+        <button id="order-btn-hide" aria-label="Закрыть кнопку заказа"><img id="close-icon" src=logos/delete.png alt=""></button>
         <button id="order-btn">ЗАКАЗАТЬ <span></span></button>
     </div>
 </header>
@@ -346,7 +346,11 @@
             </div>
         </div>
 
-        <div id="order">
+        <div id="order" hidden>
+            <button id="close-order-btn">
+                <img class="return-icon" src="logos/delete.png" alt="">
+            </button>
+            <h2>Проверьте Ваш заказ:</h2>
             <div class="display-box">
                 <span class="quantity" hidden>
                     <span class="product-name">лаваш ОБЫЧНЫЙ</span>
