@@ -8,9 +8,8 @@ html {
     --Apricot: #FFD6AF;
     --Slik: #E7CDBD;
     --Almond-Slik: #E1BFB1;
-    --Coffee: #2A1300;
+    --Espresso: #4A2422;
     --Plum: #823174;
-    --Apricot-Glass: #FFD6AFCC;
     --Plum-Glass: #8231744D;
     --Blush-Glass: #D7AA9E65;
 }
@@ -20,7 +19,7 @@ html {
 }
 [hidden] { display: none !important; }
 body, button {
-    color: var(--Coffee);
+    color: var(--Espresso);
     font-family: "Days One", sans-serif;
 }
 body {
@@ -34,7 +33,7 @@ button {
     padding: 0 0;
 }
 a, img { display: block; }
-a:active, button:active { transform: scale(0.9) rotate(-4deg);}
+a:active, button:active { transform: scale(0.85); }
 sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem; }
 
 
@@ -49,8 +48,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     display: flex;
     justify-content: center;
     background-color: var(--Apricot);
-    border-bottom: 2px solid var(--Plum-Glass);
-    box-shadow: 0 0 10px var(--Coffee);
+    box-shadow: 0 0 10px var(--Espresso);
     z-index: 1000;
 }
 #logo { width: 160px; height: 48px; }
@@ -84,13 +82,12 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 
 
                 /* Нижняя фиксировання панель навигации с тремя кнопками */
-#nav-bar, #nav-select {
-    box-shadow: 0 0 10px var(--Coffee);
+#nav-bar, .nav-marker,  #order-btn-box {
+    box-shadow: 0 0 10px var(--Espresso);
     border-radius: 2rem;
-    border: solid 2px var(--Plum-Glass);
     z-index: 1000;
 }
-#nav-bar {
+#nav-bar, #order-btn-box {
     position: fixed;
     display: flex;
     justify-content: space-around;
@@ -101,10 +98,11 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     width: 80%;
     max-width: 20rem;
     height: 4rem;
-    background-color: var(--Apricot-Glass);
-    backdrop-filter: blur(2px);
+    background: radial-gradient(ellipse, var(--Apricot), var(--Plum-Glass));
+    backdrop-filter: blur(3px);
+    transition: 0.2s;
 }
-.nav-btn, #nav-select { height: 100%; }
+.nav-btn, .nav-marker { height: 100%; }
 .nav-btn {
     display: flex;
     flex-direction: column;
@@ -112,14 +110,29 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     justify-content: center;
     width: 25%;
 }
-.nav-icon { width: 2.5rem; }
-#nav-select {
+.nav-icon { width: 3rem; }
+.nav-marker {
     position: absolute;
-    top: -2px;
+    top: 0;
     width: 36%;
-    background-color: var(--Plum-Glass);
+    background: radial-gradient(circle at 50% 40%, transparent, var(--Plum-Glass));
     transition: 0.3s;
     left: 32%;
+}
+#order-btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#close-order-btn img { width: 1rem; }
+#order-btn { font-size: 1.6rem; }
+#order-btn span { font-size: 1.2rem; }
+.nav-btn:nth-child(2), #order-btn { animation: for-order-btn 1.5s infinite}
+@keyframes for-order-btn {
+    0% { color: var(--Espresso)}
+    50% { color: var(--Plum); transform: scale(1.05); }
+    100% { color: var(--Espresso)}
 }
 
 
@@ -128,7 +141,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
                 /* Три основных контейнера, в которых будет весь контент */
 .page {
     height: 100%;
-    padding: 5rem 0.5rem 15rem;
+    padding: 5rem 0.5rem 9rem;
     max-width: 30rem;
     margin: 0 auto;
 }
@@ -142,12 +155,12 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     align-items: flex-end;
     width: calc(100% - 0.5rem);
     text-align: center;
-    background-color: var(--Almond-Slik);
-    border-radius: 0 2rem 1rem 2rem;
+    background: linear-gradient(var(--Almond-Slik), var(--Plum-Glass));
+    border-radius: 0 3rem 1rem 3rem;
     margin-top: -5px;
     margin-right: 0.5rem;
-    border: solid 3px var(--Plum);
-    box-shadow: 2px 2px 7px var(--Coffee);
+    border: solid 3px var(--Espresso);
+    box-shadow: 2px 2px 7px var(--Espresso);
 }
 
 
@@ -155,7 +168,6 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 .product-type-selector {
     display: inline-flex;
     position: relative;
-    background-color: var(--Plum);
     border-radius: 1rem 1rem 0 0;
 }
 .selector-btn {
@@ -172,9 +184,13 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 }
 .active-selector {
     background-color: var(--Almond-Slik);
+    border: 3px solid var(--Espresso);
+    border-bottom: none;
     border-radius: 1rem 1rem 0 0;
-    transform: translate(3px, 3px);
+    transform: translateY(3px);
 }
+.active-selector:active { transform: scale(1) translateY(3px); }
+.lonely-product-box .product-quantity-box { margin-top: 0.1rem;}
 
 
                 /* Бокс для изменения количества */
@@ -184,22 +200,28 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     margin-top: 0.5rem;
 }
 .delete-box {
-    width: 18%;
+    width: 25%;
     margin-right: auto;
 }
-.delete-img { width: 36%; margin: 0 auto;}
-.product-img { width: 54%; }
+.return-icon { width: 25%; margin-left: 1rem;}
+.product-img { width: 40%; }
 .increment-btns {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 28%;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
 }
-.q-btn:first-child { width: 70%; }
-.q-btn:nth-child(2) { width: 85%; }
-.q-btn:last-child { width: 100%; }
-.q-btn-img { width: 65%; margin-right: auto;}
+.q-btn { 
+    width: 60%;
+    background: radial-gradient(ellipse, transparent, var(--Plum-Glass));
+    padding: 0.4rem 0;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 5px var(--Plum);
+}
+
+
 
 
                 /* Дисплей с результатами */
@@ -210,28 +232,17 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 .quantity {
     display: flex;
     justify-content: space-between;
-    background-color: var(--Plum-Glass);
+    background-color: var(--Slik);
     font-size: 0.8rem;
     margin: 3px;
     padding: 0 5px;
+    border-radius: 0.2rem 0.6rem;
 }
 .product-name { font-size: 1rem; }
 .quantity-value { font-size: 1.5rem; }
 .hide {
-    opacity: 0.5;
+    opacity: 0.4;
     transform: scale(0.97)
-}
-#order-complete {
-    width: 100%;
-}
-#order-complete img {
-    width: 40%;
-    margin: 0 auto;
-}
-#orders-box {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 
 
@@ -239,12 +250,6 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 #contacts-cntnr {
     display: flex;
     justify-content: space-evenly;
-}
-#about-us p {
-    background-color: var(--Blush-Glass);
-    border-radius: 15px;
-    padding: 5px;
-    box-shadow: 0 0 5px var(--Apricot);
 }
 #info-page h2 {
     margin-top: 20px;
