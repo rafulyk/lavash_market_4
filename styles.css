@@ -225,11 +225,11 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
 
 
                 /* Дисплей с результатами */
-.display-box {
+.results-box {
     width: 90%;
     margin: 0.3rem;
 }
-.quantity {
+.result-string {
     display: flex;
     justify-content: space-between;
     background-color: var(--Slik);
@@ -239,7 +239,7 @@ sub { color: var(--Plum); font-weight: 100; font-style: italic; font-size: 1rem;
     border-radius: 0.2rem 0.6rem;
 }
 .product-name { font-size: 1rem; }
-.quantity-value { font-size: 1.5rem; }
+.result-value { font-size: 1.5rem; }
 .hide {
     opacity: 0.4;
     transform: scale(0.97)

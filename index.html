@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header>
+<!--ФИКС ШАПКА-->
     <div id="top-header">
         <img id="logo" src="logos/Lmarket4.png" alt="Логотип компании">
         <div id="contacts-window">
@@ -27,6 +27,7 @@
             </div>
         </div>
     </div>
+<!--ФИКС НАВБАР-->
     <div id="nav-bar" role="tablist" aria-label="Навигация по страницам">
         <button class="nav-btn" role="tab" aria-selected="false" aria-controls="info-page"><img class="nav-icon" src="logos/info.png" alt="Логотип информации">О нас</button>
         <button class="nav-btn" role="tab" aria-selected="true" aria-controls="order-page"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа">Заказать</button>
@@ -39,6 +40,7 @@
     </div>
 </header>
 <main>
+<!--ИНФО О НАС-->
     <section class="page" id="info-page" role="tabpanel" hidden>
         <h2>Напишите нам!</h2>
         <div id="contacts-cntnr">
@@ -55,11 +57,9 @@
             <p>Особые рецепты, которые сохраняют душу традиционной выпечки. Только натуральные ингредиенты.</p>
     </section>
     <section class="page" id="order-page" role="tabpanel">
-
-
-        <!--ПЕРВЫЙ БЛОК ЗАКАЗА-------------------------------------------------------------->
         <div class="product-box">
             <h2>Лаваш для шаурмы <sub>45см</sub></h2>
+<!--СЕЛЕКТОР-->
             <div class="product-type-selector" role="tablist">
                 <button class="selector-btn active-selector" role="tab" aria-selected="true">
                     <img src="logos/shawarma.png" alt="Шаурма обычная">
@@ -69,56 +69,54 @@
                 </button>
             </div>    
             <div class="product-quantity-box">
-
+<!--ЛАВАШ ОБЫЧНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством обычного лаваша 45см">
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить обычные лаваши" aria-controls="shawarma-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/shawarma.png" alt="Шаурма обычная">                  <!--1111 ЛАВАШ ОБЫЧНЫЙ-->
+                    <img class="product-img" src="logos/shawarma.png" alt="Шаурма обычная">                  
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawarma-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawarma-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawarma-total">+300шт</button>
                     </div>
                 </div>
-
+<!--ЛАВАШ СЫРНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством сырного лаваша" hidden>
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить сырные лаваши" aria-controls="shawcheese-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/shawcheese.png" alt="Шаурма сырная">                  <!--2222 ЛАВАШ СЫРНЫЙ-->
+                    <img class="product-img" src="logos/shawcheese.png" alt="Шаурма сырная">
                     <div class="increment-btns" aria-label="Увеличение количества ">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawcheese-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawcheese-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawcheese-total">+300шт</button>
                     </div>
                 </div>
-
-                <div class="display-box">
-                    <span id="shawarma-total" class="quantity" aria-live="polite">
+<!--РЕЗУЛЬТАТЫ-->
+                <div class="results-box">
+                    <span id="shawarma-total" class="result-string" aria-live="polite">
                         <span class="product-name">лаваш ОБЫЧНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
-                    <span id="shawcheese-total" class="quantity hide" aria-live="polite">
+                    <span id="shawcheese-total" class="result-string hide" aria-live="polite">
                         <span class="product-name">лаваш СЫРНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
                 </div>
             </div>
         </div>
-
-
-        <!--ВТОРОЙ БЛОК ЗАКАЗА-->
         <div class="product-box">
             <h2>Лаваш с добавками <sub>45см</sub></h2>
+<!--СЕЛЕКТОР-->
             <div class="product-type-selector" role="tablist">
                 <button class="selector-btn active-selector" role="tab" aria-selected="true">
                     <img src="logos/shawred.png" alt="Шаурма красная">
@@ -131,76 +129,74 @@
                 </button>
             </div>    
             <div class="product-quantity-box">
-
+<!--ЛАВАШ ТОМАТНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством томатного лаваша">
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить томатные лаваши" aria-controls="shawred-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/shawred.png" alt="Шаурма красная">                  <!--3333 ЛАВАШ ТОМАТНЫЙ-->
+                    <img class="product-img" src="logos/shawred.png" alt="Шаурма красная">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawred-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawred-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawred-total">+300шт</button>
                     </div>
                 </div>
-
+<!--ЛАВАШ С ЗЕЛЕНЬЮ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством лаваша с зеленью" hidden>
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить лаваши с зеленью" aria-controls="shawgreen-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/shawgreen.png" alt="Шаурма зеленая">                  <!--4444 ЛАВАШ С ЗЕЛЕНЬЮ-->
+                    <img class="product-img" src="logos/shawgreen.png" alt="Шаурма зеленая">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawgreen-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawgreen-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawgreen-total">+300шт</button>
                     </div> 
                 </div>
-
+<!--ЛАВАШ ЧЕРНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством черного лаваша" hidden>
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить черные лаваши" aria-controls="shawblack-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/shawblack.png" alt="Шаурма черная">                  <!--5555 ЛАВАШ ЧЕРНЫЙ-->
+                    <img class="product-img" src="logos/shawblack.png" alt="Шаурма черная">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="shawblack-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="shawblack-total">+100шт </button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="shawblack-total">+300шт</button>
                     </div> 
                 </div>
-
-                <div class="display-box">
-                    <span id="shawred-total" class="quantity" aria-live="polite">
+<!--РЕЗУЛЬТАТЫ-->
+                <div class="results-box">
+                    <span id="shawred-total" class="result-string" aria-live="polite">
                         <span class="product-name">лаваш ТОМАТНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
-                    <span id="shawgreen-total" class="quantity hide" aria-live="polite">
+                    <span id="shawgreen-total" class="result-string hide" aria-live="polite">
                         <span class="product-name">лаваш с ЗЕЛЕНЬЮ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
-                    <span id="shawblack-total" class="quantity hide" aria-live="polite">
+                    <span id="shawblack-total" class="result-string hide" aria-live="polite">
                         <span class="product-name">лаваш ЧЕРНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
                 </div>
             </div>
         </div>
-
-
-        <!--ТРЕТИЙ БЛОК ЗАКАЗА-------------------------------------------------------------->
         <div class="product-box">
             <h2>Лаваш мини <sub>30см</sub></h2>
+<!--СЕЛЕКТОР-->
             <div class="product-type-selector" role="tablist">
                 <button class="selector-btn active-selector" role="tab" aria-selected="true">
                     <img src="logos/shawarma.png" alt="Шаурма обычная">
@@ -210,56 +206,54 @@
                 </button>
             </div>    
             <div class="product-quantity-box">
-
+<!--ЛАВАШ МИНИ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством обычного лаваша МИНИ">
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить обычные мини лаваши" aria-controls="minishaw-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/minishaw.png" alt="Шаурма обычная мини">                  <!--6666 ЛАВАШ МИНИ-->
+                    <img class="product-img" src="logos/minishaw.png" alt="Шаурма обычная мини">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="minishaw-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="minishaw-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="minishaw-total">+300шт</button>
                     </div>
                 </div>
-
+<!--ЛАВАШ МИНИ СЫРНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством сырного лаваша МИНИ" hidden>
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить сырные мини лаваши" aria-controls="minicheese-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/minicheese.png" alt="Шаурма сырная мини">                  <!--7777 ЛАВАШ МИНИ СЫРНЫЙ-->
+                    <img class="product-img" src="logos/minicheese.png" alt="Шаурма сырная мини">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="25" aria-label="Увеличить на 25шт" aria-controls="minicheese-total">+25шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 100шт" aria-controls="minicheese-total">+100шт</button>
                         <button class="q-btn" data-quantity="300" aria-label="Увеличить на 300шт" aria-controls="minicheese-total">+300шт</button>
                     </div> 
                 </div>
-
-                <div class="display-box">
-                    <span id="minishaw-total" class="quantity" aria-live="polite">
+<!--РЕЗУЛЬТАТЫ-->
+                <div class="results-box">
+                    <span id="minishaw-total" class="result-string" aria-live="polite">
                         <span class="product-name">лаваш обычный МИНИ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
-                    <span id="minicheese-total" class="quantity hide" aria-live="polite">
+                    <span id="minicheese-total" class="result-string hide" aria-live="polite">
                         <span class="product-name">лаваш сырный МИНИ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
                 </div>
             </div>
         </div>
-
-
-        <!--ЧЕТВЕРТЫЙ БЛОК ЗАКАЗА----------------------------------------------------------->
         <div class="product-box">
             <h2>Лепешка для гироса</h2>
+<!--СЕЛЕКТОР-->
             <div class="product-type-selector" role="tablist">
                 <button class="selector-btn active-selector" role="tab" aria-selected="true">
                     <img src="logos/giros.png" alt="Гирос обычный">
@@ -269,167 +263,165 @@
                 </button>
             </div>    
             <div class="product-quantity-box">
-
+<!--ГИРОС ОБЫЧНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством обычных лепешек для гироса">
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить лепешки для обычного гироса" aria-controls="giros-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/giros.png" alt="Гирос обычный">                  <!--8888 ГИРОС ОБЫЧНЫЙ-->
+                    <img class="product-img" src="logos/giros.png" alt="Гирос обычный">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="10" aria-label="Увеличить на 25шт" aria-controls="giros-total">+10шт</button>
                         <button class="q-btn" data-quantity="50" aria-label="Увеличить на 100шт" aria-controls="giros-total">+50шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 300шт" aria-controls="giros-total">+100шт</button>
                     </div>
                 </div>
-
+<!--ГИРОС СЫРНЫЙ-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством сырных лепешек для гироса" hidden>
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить лепешки для сырного гироса" aria-controls="giroscheese-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/giroscheese.png" alt="Гирос сырный">                  <!--9999 ГИРОС СЫРНЫЙ-->
+                    <img class="product-img" src="logos/giroscheese.png" alt="Гирос сырный">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="10" aria-label="Увеличить на 25шт" aria-controls="giroscheese-total">+10шт</button>
                         <button class="q-btn" data-quantity="50" aria-label="Увеличить на 100шт" aria-controls="giroscheese-total">+50шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 300шт" aria-controls="giroscheese-total">+100шт</button>
                     </div> 
                 </div>
-
-                <div class="display-box">
-                    <span id="giros-total" class="quantity" aria-live="polite">
+<!--РЕЗУЛЬТАТЫ-->
+                <div class="results-box">
+                    <span id="giros-total" class="result-string" aria-live="polite">
                         <span class="product-name">гирос ОБЫЧНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
-                    <span id="giroscheese-total" class="quantity hide" aria-live="polite">
+                    <span id="giroscheese-total" class="result-string hide" aria-live="polite">
                         <span class="product-name">гирос СЫРНЫЙ</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
                 </div>
             </div>
         </div>
-
-
-        <!--ПЯТЫЙ БЛОК ЗАКАЗА--------------------------------------------------------------->
-        <div class="lonely-product-box">
+        <div class="product-box">
             <h2>Булочка для хот-дога</h2>
+<!--СЕЛЕКТОР (имитация для правильной работы циклов JS)-->
+            <button class="selector-btn" hidden></button>
             <div class="product-quantity-box">
-
+<!--БУЛОЧКА ДЛЯ ХОТ-ДОГА-->
                 <div class="btns-img-box" role="tabpanel" aria-label="Управление количеством булочек для хот-дога">
                     <div class="delete-box">
                         <button class="delete-btn" aria-label="Удалить булочки для хот-дога" aria-controls="hotdog-total" hidden>
                             <img class="return-icon" src="logos/delete.png" alt="">
                         </button>
                     </div>
-                    <img class="product-img" src="logos/hotdog.png" alt="Хот-дог">                  <!--9999 БУЛОЧКА ДЛЯ ХОТ-ДОГА-->
+                    <img class="product-img" src="logos/hotdog.png" alt="Хот-дог">
                     <div class="increment-btns" aria-label="Увеличение количества">
                         <button class="q-btn" data-quantity="10" aria-label="Увеличить на 25шт" aria-controls="hotdog-total">+10шт</button>
                         <button class="q-btn" data-quantity="50" aria-label="Увеличить на 100шт" aria-controls="hotdog-total">+50шт</button>
                         <button class="q-btn" data-quantity="100" aria-label="Увеличить на 300шт" aria-controls="hotdog-total">+100шт</button>
                     </div>
                 </div>
-                
-                <div class="display-box">
-                    <span id="hotdog-total" class="quantity" aria-live="polite">
+<!--РЕЗУЛЬТАТЫ-->
+                <div class="results-box">
+                    <span id="hotdog-total" class="result-string" aria-live="polite">
                         <span class="product-name">булочка для ХОТ-ДОГА</span>
-                        <span class="total-quantity">
-                            <span class="quantity-value">0</span>штук</span>
+                        <span class="total-result">
+                            <span class="result-value">0</span>штук</span>
                         </span>
                     </span>
+                  
                 </div>
             </div>
         </div>
-
+<!--ЗАКАЗ-->
         <div id="order" hidden>
             <button id="close-order-btn">
                 <img class="return-icon" src="logos/delete.png" alt="">
             </button>
             <h2>Проверьте Ваш заказ:</h2>
-            <div class="display-box">
-                <span class="quantity" hidden>
+            <div class="results-box">
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш ОБЫЧНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
-                <span class="quantity" hidden>
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш СЫРНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
             </div>
-            <div class="display-box">
-                <span class="quantity" hidden>
+            <div class="results-box">
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш ТОМАТНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
-                <span class="quantity" hidden>
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш ЗЕЛЕНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
-                <span class="quantity" hidden>
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш ЧЕРНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
             </div>
-            <div class="display-box">
-                <span class="quantity" hidden>
+            <div class="results-box">
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш обычный МИНИ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
-                <span class="quantity" hidden>
+                <span class="result-string" hidden>
                     <span class="product-name">лаваш сырный МИНИ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
             </div>
-            <div class="display-box">
-                <span class="quantity" hidden>
+            <div class="results-box">
+                <span class="result-string" hidden>
                     <span class="product-name">гирос ОБЫЧНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
-                <span class="quantity" hidden>
+                <span class="result-string" hidden>
                     <span class="product-name">гирос СЫРНЫЙ</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
             </div>
-            <div class="display-box">
-                <span class="quantity" hidden>
+            <div class="results-box">
+                <span class="result-string" hidden>
                     <span class="product-name">булочка для ХОТ-ДОГА</span>
-                    <span class="total-quantity">
-                        <span class="quantity-value">0</span>штук</span>
+                    <span class="total-result">
+                        <span class="result-value">0</span>штук</span>
                     </span>
                 </span>
             </div>
         </div>
-
     </section>
-
+<!--ЛИЧНЫЙ КАБИНЕТ-->
     <section class="page" id="account-page" role="tabpanel" hidden>
         <h1>Мои заказы</h1>
         <div id="orders-box"></div>
     </section>
-    
 </main>
 <script src="script.js"></script>
 </body>
